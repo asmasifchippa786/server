@@ -8,7 +8,7 @@ app.get('/abc', (req, res) => {
     res.send('Hello there! I am Here , My Name is M.Anas Asif ' + new Date().toString())
 })
 const  __dirname = path.resolve()
-app.use('/', express.static(path.join(__dirname , 'server/build')))
+app.use('/', express.static(path.join(__dirname , './server/build')))
 
 
 app.listen(port, () => {
