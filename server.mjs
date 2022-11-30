@@ -7,8 +7,17 @@ app.get('/abc', (req, res) => {
     console.log("requet ip: " , req.ip);
     res.send('Hello there! I am Here , My Name is M.Anas Asif ' + new Date().toString())
 })
+app.get('/getweather', (req, res) => {
+  console.log("requet ip: " , req.ip);
+  res.send('Hello there! I am Here , My Name is M.Anas Asif ' + new Date().toString())
+})
+app.get('/gettime', (req, res) => {
+  console.log("requet ip: " , req.ip);
+  res.send('Hello there! I am Here , My Name is M.Anas Asif ' + new Date().toString())
+})
 const  __dirname = path.resolve()
 app.use('/', express.static(path.join(__dirname , './server/build')))
+app.get('*', express.static(path.join(__dirname , './server/build')))
 
 
 app.listen(port, () => {
